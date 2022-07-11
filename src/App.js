@@ -1,25 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import { SWRConfig } from 'swr';
+import { ImagesWrapper } from './components/ImagesWrapper';
+import { useState } from 'react';
+import { Button, Form, Row, Col } from 'react-bootstrap';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const [searchId, setSearchId] = useState(1644227106000);
+  const fetcher = async url => {
+    const res = await fetch(url);
+    if (!res.ok) {
+      const error = new Error('An error occurred while fetching the data.');
+      error.info = await res.json();
+      error.status = res.status;
+      throw error;
+    }
+
+    return res.json()
+  }
+  return (<SWRConfig
+    value={{
+      fetcher: fetcher,
+      onError: (err) => {
+        console.error(err);
+      },
+    }}>
+    <Form onSubmit={(event) => {
+      event.preventDefault();
+      setSearchId(event.target[0].value);
+      event.target.reset();
+    }}>
+      <Row className="align-items-center">
+        <Col xs="auto">
+          <Form.Control type="text" placeholder="Search ID:" />
+        </Col>
+        <Col xs="auto">
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Col>
+      </Row>
+    </Form>
+    <ImagesWrapper searchId={searchId} />
+  </SWRConfig >
   );
-}
+};
 
 export default App;

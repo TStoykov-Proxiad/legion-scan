@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.img-nav {
+  top: 0;
+  right: 0;
+  background-color: #50c4c8;
+}
+.nav-btns{
+  width:33.33333%;
+}
+.img-nav-text{
+  text-align: center;
+}
+
+.selected{
+  /* filter: opacity(0.5) drop-shadow(0 0 0 blue); */
+  background-color: blue;
+}
