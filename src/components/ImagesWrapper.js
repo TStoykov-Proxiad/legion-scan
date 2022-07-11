@@ -37,7 +37,7 @@ export function ImagesWrapper({ searchId }) {
     if (isLoading) return <Spinner animation="border" variant="primary" />
 
     return (
-        <Images images={images} handleNext={handleNext} handlePrev={handlePrev} />
+        <Images images={images} handleNext={handleNext} handlePrev={handlePrev} downloadId={"page"+searchAfter.length}/>
     );
 }
 
