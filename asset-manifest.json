@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/legion-scan/static/css/main.705de56b.css",
+    "main.css": "/legion-scan/static/css/main.434b21b0.css",
     "main.js": "/legion-scan/static/js/main.f5bc63cf.js",
     "static/js/787.3d65b2b9.chunk.js": "/legion-scan/static/js/787.3d65b2b9.chunk.js",
     "index.html": "/legion-scan/index.html",
-    "main.705de56b.css.map": "/legion-scan/static/css/main.705de56b.css.map",
+    "main.434b21b0.css.map": "/legion-scan/static/css/main.434b21b0.css.map",
     "main.f5bc63cf.js.map": "/legion-scan/static/js/main.f5bc63cf.js.map",
     "787.3d65b2b9.chunk.js.map": "/legion-scan/static/js/787.3d65b2b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.705de56b.css",
+    "static/css/main.434b21b0.css",
     "static/js/main.f5bc63cf.js"
   ]
 }
