@@ -35,3 +35,7 @@ code {
 .singleImage:hover{
   transform: scale(1.7); 
 }
+
+.singleImageFull{
+  padding: 4px;
+}

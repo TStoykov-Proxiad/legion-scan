@@ -19,7 +19,9 @@ export default function MyImage({ image, isThumbnail, zipFile }) {
         <span id={"img-" + image.guid} >
             <Image
                 src={isThumbnail ? thumbnail : src}
-                className={isSelected ? "singleImage selected" : "singleImage"}
+                className={isThumbnail ? 
+                (isSelected ? "singleImage selected" : "singleImage") : 
+                (isSelected ? "singleImageFull selected" : "singleImageFull")}
                 thumbnail={isThumbnail}
                 onClick={() => setIsSelected(!isSelected)}
             />
