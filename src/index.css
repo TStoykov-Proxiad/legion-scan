@@ -13,18 +13,25 @@ code {
 }
 
 .img-nav {
-  top: 0;
-  right: 0;
   background-color: #50c4c8;
+  width: 100%;
 }
 .nav-btns{
-  width:33.33333%;
+  width:25%;
 }
 .img-nav-text{
   text-align: center;
 }
-
+.scrolled{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
 .selected{
   /* filter: opacity(0.5) drop-shadow(0 0 0 blue); */
   background-color: blue;
+}
+.singleImage:hover{
+  transform: scale(1.7); 
 }
